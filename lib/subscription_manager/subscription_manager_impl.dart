@@ -4,6 +4,7 @@ import 'subscription_manager.dart';
 
 const String kMonthSKU = "month";
 const String kYearSKU = "year";
+const String kAppPackageName = "com.tflex.tflex";
 
 class SubscriptionManagerImpl implements SubscriptionManager {
 
@@ -118,7 +119,7 @@ class SubscriptionManagerImpl implements SubscriptionManager {
   /// so users can cancel there subscriptions
   @override
   Future<void> cancelSubscription(String currentProductID) async {
-    await flutterInappPurchase.manageSubscription(currentProductID, 'com.tflex.tflex');
+    await flutterInappPurchase.manageSubscription(currentProductID, kAppPackageName);
   }
 
 }
